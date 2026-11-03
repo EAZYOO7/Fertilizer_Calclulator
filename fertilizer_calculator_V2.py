@@ -1,3 +1,41 @@
+# ==================================================
+# 1. FUNCTIONS DEFINITIONS
+# ==================================================
+
+def calculate_application_rate(requirement, concentration):
+
+    application_rate = (
+        requirement * 100
+    ) / concentration
+
+    return application_rate
+
+
+def calculate_nutrient_supplied(application_rate, concentration):
+
+    nutrient_supplied = (
+        application_rate * (concentration / 100)
+    )
+
+    return nutrient_supplied
+
+
+def calculate_nutrient_remaining(requirement, nutrient_supplied):
+
+    nutrient_still_required = (
+        requirement - nutrient_supplied
+    )
+
+    return nutrient_still_required
+
+def calculate_nutrient_concentration(ratio, total_ratio, fertilizer_analysis):
+
+    concentration = (
+        ratio / total_ratio
+    ) * fertilizer_analysis
+
+    return concentration
+
 fertilizer = None
 nutrient_concentration = None
 application_rate = None
